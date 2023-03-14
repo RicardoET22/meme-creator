@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Funciones</title>
+    
+</head>
+<body class="bg-default">
+  <header>
+    <nav class="navbar ">
+      <section class="container-fluid " id="menu">
+        <a id="nombre" class="navbar-brand align-middle " href="#"  >
+          <img src="img/richydev.png" alt="R" class="d-inline-block align-text-middle">
+          Ricardo Espinosa
+        </a>
+        <ul id="links" class="nav nav-justified nav-fill justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link activo" aria-current="page" href="#">Actividad 10</a>
+          </li>
+          <div id="tema">
+            <div class="capas" id="capa1" title="dark" onclick="dark()"></div>
+            <div class="capas" id="capa2" title="light" ></div>
+            <div class="capas" id="capa3" title="defaulte" ></div>
+        </div>
+        </ul>
+      </section>
+    </nav>
+    
+  </header>
+  <section id="act10">
+    <div id="categorias">
+      <h3 id="cat">Selecciona una categoría: &nbsp;&nbsp;</h3>
+      <div class="option"  onclick="showSection(1)">
+        <img src="img/plantilla-jerry-llorando-meme.jpg">
+        <h3>Memes básicos</h3>
+      </div>
+      <div class="option" onclick="showSection(2)"> 
+        <img src="img/sht1.jpg">
+        <h3>Shitpost</h3>
+      </div>
+      <div class="option" onclick="showSection(3)">
+        <img src="img/piolin.jpg">
+        <h3>Imagenes de piolin</h3>
+      </div>
+    </div>
+    <div class="MEMES">
+      <div class="image-column">
+        <img id="image-preview" src="img/richydev.png" alt="Preview">
+        <div class="image-overlay">
+          <p id="text-overlay"></p>
+          <p id="author-overlay"></p>
+        </div>
+      </div> 
+     
+      <div >
+        <form>
+          <div>
+             <!--Datos Cat 1-->
+            <div id="data-1" class="section">
+            <p>Selecciona una imagen:</p>
+            <div class="image-option">
+              <img src="img/plantilla-jerry-llorando-meme.jpg" alt="Opción 1" onclick="changeImage(this.src)">
+            </div>
+            <div class="image-option">
+              <img src="img/plantilla-cabo.jpg" alt="Opción 2" onclick="changeImage(this.src)">
+            </div>
+            <div class="image-option">
+              <img src="img/wow.jpg" alt="Opción 3" onclick="changeImage(this.src)">
+            </div>
+          </div>
+          <div>
+            <!--Datos Cat 2-->
+            <div id="data-2" class="section">
+              <p>Selecciona una imagen:</p>
+              <div class="image-option">
+                <img src="img/sht1.jpg" alt="Opción 1" onclick="changeImage(this.src)">
+              </div>
+              <div class="image-option">
+                <img src="img/omar.png" alt="Opción 2" onclick="changeImage(this.src)">
+              </div>
+              <div class="image-option">
+                <img src="img/aceituna.jpeg" alt="Opción 3" onclick="changeImage(this.src)">
+              </div>
+            </div>
+            <div>
+              <!--Datos Cat 3-->
+            <div id="data-3" class="section">
+              <p>Selecciona una imagen:</p>
+              <div class="image-option">
+                <img src="img/piolin.jpg" alt="Opción 1" onclick="changeImage(this.src)">
+              </div>
+              <div class="image-option">
+                <img src="img/piolin2.png" alt="Opción 2" onclick="changeImage(this.src)">
+              </div>
+              <div class="image-option">
+                <img src="img/piolin3.jpg" alt="Opción 3" onclick="changeImage(this.src)">
+              </div>
+            </div>
+            <div><!--fincats-->
+            <hr> <label for="text-input">Texto:</label>
+            <input type="text" id="text-input" name="text-input">
+          </div><br>
+          <div>
+            <label for="author-input">Autor:</label>
+            <input type="text" id="author-input" name="author-input">
+          </div><br>
+          <select id="tamanio" onchange="dimension()">
+            <option value="default">Tamaño del texto</option>
+            <option value="chico">Chico</option>
+            <option value="mediano">Mediano</option>
+            <option value="grande">Grande</option>
+        </select><br>
+        <label for="color-picker">Elige un color:</label>
+        <input type="color" id="color-picker">
+          <div id="mover">
+            <div id="horizontal">
+            <p>Mover horizontal</p>
+            <input type="button" value="+" onclick="derecha()">
+            <input type="button" value="-" onclick="izquierda()">
+            </div>
+            <div id="vertical">
+            <p>Mover vertical</p>
+            <input type="button" value="+" onclick="abajo()">
+            <input type="button" value="-" onclick="arriba()">
+          </div>
+        </div>
+        </form>
+      </div>
+      <!--FIN Datos Cat 1-->
+    </div>
+      
+     
+    </section>
+    <footer>DAND EVN503</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
